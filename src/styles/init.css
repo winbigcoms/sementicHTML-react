@@ -1,0 +1,30 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+*{
+  box-sizing: border-box;
+  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+}
+body{
+  overflow: hidden;
+}
+body,h1, h2, h3, h4, h5, h6, p, ul{
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+ul,ol{
+  list-style: none;
+}
+a {
+  color: #000; 
+  text-decoration: none; 
+  outline: none
+}
+
+a:hover, a:active {
+  text-decoration: none; 
+  color:#000; 
+}
+
