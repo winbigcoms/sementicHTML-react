@@ -16,22 +16,29 @@ export default function HeaderComponent(){
             <img className="header_logo" src="/images/brand.svg" alt="이디야 로고"/>
           </Link>
         </h2>
-        <button className="header_nav_burgerBtn" onClick={showMoblieMenu}>
+        <button className="header_nav_burgerBtn" aria-label="openNavigation" onClick={showMoblieMenu}>
           <span className="burger_top"></span>
           <span className="burger_middle"></span>
           <span className="burger_bottom"></span>
         </button>
-        <ul className={moblieMenuState? "header_nav" : "header_nav_close"}>
-          <li>
-            <a href="./login">로그인</a>
-          </li>
-          <li>
-            <a href="./signUp">회원가입</a>
-          </li> 
-          <li>
-            <a href="./beverage">이디야 음료</a>
-          </li>
-        </ul>
+        <nav className={moblieMenuState? "header_nav" : "header_nav_close"}>
+          <h3 className="a11y_hidden">메인 메뉴 네비게이션</h3>
+          <ul className="header_nav_list">
+            <li>
+              <a href="./login">로그인</a>
+            </li>
+            <li>
+              <a href="./signUp">회원가입</a>
+            </li> 
+            <li>
+              <a href="./beverage">이디야 음료</a>
+            </li>
+          </ul>         
+          <button className="header_nav_closeBtn" aria-label="closeNavigation">
+            <span className="cross_btn cross_top"></span>
+            <span className="cross_btn cross_bottom"></span>
+          </button>
+        </nav>
       </header>
     </div>
   )

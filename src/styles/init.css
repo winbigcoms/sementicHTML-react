@@ -28,3 +28,12 @@ a:hover, a:active {
   color:#000; 
 }
 
+.visually-hidden {
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

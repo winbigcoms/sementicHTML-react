@@ -32,5 +32,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "- 웹 개발의 기본이 되는 html과 css를 목적에 맞고 ui의 흐름과 역할에 맞게 작성한다.\r - 웹 접근성과 웹 표준을 검사한다. \r - 반응형 웹으로 제작한다.\r - 크로스 브라우징을 위해 normalize css를 사용한다.\r - SPA이지만 SEO에 대해 생각해본다.\r 검사 방법 크롬 확장 프로그램인 light house이용;",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winbigcoms/sementicHTML-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/winbigcoms/sementicHTML-react/issues"
+  },
+  "homepage": "https://github.com/winbigcoms/sementicHTML-react#readme"
 }
