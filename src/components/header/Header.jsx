@@ -34,7 +34,7 @@ export default function HeaderComponent(){
               <a href="./beverage">이디야 음료</a>
             </li>
           </ul>         
-          <button className="header_nav_closeBtn" aria-label="closeNavigation">
+          <button className="header_nav_closeBtn" aria-label="closeNavigation" onClick={showMoblieMenu}>
             <span className="cross_btn cross_top"></span>
             <span className="cross_btn cross_bottom"></span>
           </button>

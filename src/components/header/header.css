@@ -4,12 +4,13 @@
 }
 .header{
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   max-width: 1140px;
   margin: auto;
   padding: 16px 0;
   display: flex;
   justify-content: space-between;
+  border-bottom: 0.5px solid #F5F5F5;
 }
 .header_logo{
   width: 140px;
@@ -25,13 +26,10 @@
   display: flex;
 }
 .header_nav_closeBtn{
-  position: relative;
-  width: 50px;
-  height: 50px;
   display: none;
 }
 .header_nav_close ul li a, .header_nav li a{
-  margin-left: 15px;
+  padding-left: 15px;
   color: #24388D;
   font-weight: normal;
   font-size: 15px;
@@ -45,7 +43,6 @@
     padding: 0;
     background: #FEFEFE;
       /* 그레이스케일 / 스노우 */
-    border: 0.5px solid #F5F5F5;
   }
   .header{
     padding: 0;
@@ -65,7 +62,6 @@
     height: 2px;
     background: #616161;
     left: calc(50% - 9px);
-
   }
   .header_nav_burgerBtn .burger_top{
     top: 35%;
@@ -83,34 +79,65 @@
     top: 0;
     height: 100vh;
     width: 100vw;
-    animation: openMenu 0.8s ease-in-out both;
+    transition: all 0.8s;
+  }
+  .header_nav_close{
+    position: absolute;
+    background: rgba(20, 24, 44, 0.9);
+    height: 100vh;
+    width: 100vw;
+    left: 150%;
+    top: 0;
+    transition: all 0.8s;
+  }
+  .header_nav_close ul li a, .header_nav li a{
+    color: #fff;
   }
   .header_nav_list{
-    flex-direction: row;
+    flex-direction: column;
+    padding-top: 66px;
   }
   .header_nav_list li {
     height: 40px;
     padding: 12px 10px;
+  }
+  .header_nav_list li:hover{
+    background-color: #24388D;
   }
   .header_nav_list li a{
     font-weight: normal;
     font-size: 14px;
     line-height: 14px;
     color: #FEFEFE;
+    border-bottom: 0.5px solid #5B6AA9;
+    display: block;
+    padding-bottom: 12px;
   }
-  .header_nav_close{
+  .header_nav_list li:last-child a{
+    border: 0;
+  }
+  .header_nav_closeBtn{
+    display: block;
+    background: rgba(0, 0, 0, 0);
     position: absolute;
-    left: 150%;
-    top: 0;
-    animation: closeMenu 0.8s ease-in-out both;
+    width: 50px;
+    height: 50px;
+    right: 8px;
+    top: 8px;
   }
-
-  @keyframes openMenu {
-    0%{left: 150%;}
-    100%{left: 0;}
+  .cross_btn{
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 0px;
+    border: 1px solid #F5F5F5;
+    top: calc(50% - 1px);
+    left: calc(50% - 10px);
   }
-  @keyframes closeMenu {
-    0%{left: 0;}
-    100%{left: 150%;}
+  .cross_top{
+    transform: matrix(-0.71, 0.74, 0.68, 0.71, 0, 0);
+  }
+  .cross_bottom{
+    transform: matrix(0.71, 0.74, -0.68, 0.71, 0, 0);
   }
 }
