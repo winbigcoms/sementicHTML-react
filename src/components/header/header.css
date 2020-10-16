@@ -4,7 +4,6 @@
 }
 .header{
   position: relative;
-  /* overflow: hidden; */
   max-width: 1140px;
   margin: auto;
   padding: 16px 0;
@@ -42,7 +41,6 @@
     width: 100%;
     padding: 0;
     background: #FEFEFE;
-      /* 그레이스케일 / 스노우 */
   }
   .header{
     padding: 0;
