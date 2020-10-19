@@ -1,17 +1,25 @@
-import React, { useCallback, useRef } from "react";
-import { useEffect } from "react";
+import React from "react";
+import { useCallback } from "react";
+import { useState } from "react";
 import "./main.css"
 export default function Main(){
+  const [animationState,setAnimationState] = useState(true);
+  const animationControll = useCallback(()=>{
+    setAnimationState(animationState => !animationState);
+  },[])
   return (
     <div className="mainContainer">
       <main className="main">
-        <section className="main_banner">
+        <section className={animationState?["main_banner","on"].join(" "):["main_banner","off"].join(" ")}>
           <h2 className="mainHeading">ALWAYS BESIDE YOU <span>EDIYA COFFEE</span></h2>
           <span className="mainDiviedLine"></span>
           <p className="main_slogan">늘 당신 곁에, 이디야 커피의 다양한 메뉴를 맛보세요</p>
           <a className="main_show_menu_btn" href="./beverage" role="button">메뉴 보기</a>
           <img className="main_new_beverage_img_left" src="/images/cheese-cookie.png" alt="치즈가 쿠키했대 쉐이크 이미지"/>
           <img className="main_new_beverage_img_right" src="/images/choco-rice.png" alt="초코 묻고 더블 쉐이크, 밥 대신 라이스 쉐이크 이미지"/>
+          <button className="animationController" onClick={animationControll}>
+            <span aria-label="animationControllerBoll" className={animationState?["animationControllerBoll","on"].join(" "):["animationControllerBoll","off"].join(" ")}></span>
+          </button>
         </section>
         <section className="main_promotion">
           <h2 className="a11y_hidden">메인페이지 프로모션</h2>
@@ -49,12 +57,12 @@ export default function Main(){
               <section className="main_news"> 
                 <h3>NEWS</h3>
                 <article>
-                    <h4></h4>
-                    <time></time>
+                    <h4>이디야 커피, 조걱 케이크 2종 출시... 디저트 강화</h4>
+                    <time dateTime="2020-09-08">2020.09.08</time>
                 </article>
                 <article>
-                    <h4></h4>
-                    <time></time>
+                    <h4>이디야 커피, '비니스트 커피믹스...</h4>
+                    <time dateTime="2020-08-27">2020.08.27</time>
                 </article>
                 <button className="main_news_btn_box">
                   <span className="main_more_news_btn_row"></span>

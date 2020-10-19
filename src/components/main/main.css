@@ -46,17 +46,50 @@
 img[class*="main_new_beverage_img"]{
   position: absolute;
 }
+.main_banner.on img[class*="main_new_beverage_img"]{
+  animation: upDown 3s ease infinite both;
+}
+.main_banner.off img[class*="main_new_beverage_img"]{
+  animation:none
+}
 .main_new_beverage_img_left{
   width: 40%;
   left: -5%;
   top: 20%;
-  animation: upDown 3s ease infinite both
+  animation-delay: 0s;
 }
 .main_new_beverage_img_right{
   width: 60%;
   left: 60%;
   top: 40%;
-  animation: upDown 3s 1s ease infinite both
+  animation-delay: 1s;
+}
+.animationController{
+  position: absolute;
+  border: 1px solid #000;
+  width: 70px;
+  height: 30px;
+  top: 5px;
+  right: 0;
+  border-radius: 15px;
+  background-color: inherit;
+  opacity: 0.5;
+}
+.animationControllerBoll{
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  transition: all 0.5s;
+}
+.animationControllerBoll.on{
+  left: 0;
+}
+.animationControllerBoll.off{
+  left: calc(100% - 28px);
 }
 .main_promotion{
   background-color: #f5f5f5;
@@ -180,8 +213,18 @@ button[class*="main_notice_controller_btn"] span{
   font-weight: bold;
   font-size: 15px;
   line-height: 100%;
+  margin-bottom: 15px;
 }
-
+.main_news article{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.main_news article h4,.main_news article time{
+  font-size: 12px;
+  line-height: 150%;
+  color: #F5F5F5;
+}
 .main_news_btn_box{
   position: absolute;
   width: 15px;
@@ -232,7 +275,10 @@ button[class*="main_notice_controller_btn"] span{
     width: 200px;
     left: 0px;
     top: 10px;
-    animation: none;
+    animation: none !important; 
+  }
+  .animationController{
+    display: none;
   }
   .main_promotion{
     height: inherit;
