@@ -45,6 +45,7 @@
 }
 img[class*="main_new_beverage_img"]{
   position: absolute;
+  transition: all 0.7s;
 }
 .main_banner.on img[class*="main_new_beverage_img"]{
   animation: upDown 3s ease infinite both;
@@ -244,6 +245,30 @@ button[class*="main_notice_controller_btn"] span{
 }
 .main_news_btn_box span:first-child{
   transform: rotate(90deg);
+}
+.menu_description_close_btn{
+  background-color: inherit;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+.menu_description_close_btn span[class*=menu_description_close_cross]{
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  top: calc(50%);
+  left: calc(50% - 6px);
+  background-color: #000;
+  position: absolute;
+  border-radius: 2px;
+}
+.menu_description_close_cross_left{
+  transform: rotate(45deg);
+}
+.menu_description_close_cross_right{
+  transform: rotate(135deg);
 }
 @media(max-width:400px){
   .main_banner{

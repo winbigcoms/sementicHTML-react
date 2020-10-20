@@ -7,7 +7,8 @@ export default function HeaderComponent(){
   const [moblieMenuState,setMoblieMenuState] = useState(false);
   const showMoblieMenu = useCallback(()=>{
     setMoblieMenuState((state)=>!state);
-  },[])
+  },[]);
+
   return(
     <div className="header_container">
       <header className="header">
@@ -31,7 +32,7 @@ export default function HeaderComponent(){
               <a href="./signUp">회원가입</a>
             </li> 
             <li>
-              <a href="./beverage">이디야 음료</a>
+              <a href="./menu">이디야 음료</a>
             </li>
           </ul>         
           <button className="header_nav_closeBtn" aria-label="closeNavigation" onClick={showMoblieMenu}>

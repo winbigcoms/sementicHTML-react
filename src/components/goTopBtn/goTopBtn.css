@@ -1,0 +1,19 @@
+.goTopBtn{
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #C8CDE2;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: all 0.7s;
+  background-image: url("/images/icon-arrow-darkblue.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(-90deg);
+}
+
+.active{
+  opacity: 1;
+}

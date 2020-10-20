@@ -1,0 +1,108 @@
+.menuPage{
+  max-width: 740px;
+  margin: auto;
+}
+.menu{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.menuCard{
+  width: 48%;
+  background: #F5F5F5;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+figure{
+  text-align: center;
+}
+.menuCard:hover img{
+  transform: scale(1.1);
+}
+figure img{
+  width:80%;
+  height: auto;
+  transition: all 0.8s;
+
+}
+figcaption{
+  font-size: 14px;
+  line-height: 14px;
+  padding-bottom: 40px;
+}
+img[class*="Brownie"]{
+  transform: scale(0.8);
+}
+.menuCard:hover img[class*="Brownie"]{
+  transform: scale(0.9);
+}
+.menu_description_box{
+  /* display: none; */
+  opacity: 0;
+  /* visibility: hidden; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #CCCCCC;
+  transition: all 0.8s;
+}
+.active{
+  /* display: block; */
+  /* visibility:visible; */
+  opacity: 1; 
+}
+.menu_description{
+  height: 80%;
+  padding: 20px;
+}
+.menu_description_title{
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+}
+.menu_description_title span{
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #616161;
+  padding: 6px 0 16px;
+  border-bottom: 2px solid;
+  margin-bottom: 6px;
+}
+.menu_desc_cirt{
+  height: 20%;
+}
+
+.menu_desc_cirt dd{
+  padding-left: 10px;
+  margin-top: -10px;
+}
+.menu_cirt_table{
+  width: 100%;
+  margin: 10px;
+}
+.menu_cirt_table tbody tr td{
+  width: 60px;
+  height: 13px;
+  font-size: 13px;
+  line-height: 13px;
+  color: #0F0F0F;
+}
+@media(max-width:400px){
+  .menuPage{
+    padding: 70px 18px 10px;
+  }
+  .menuCard{
+    height: 373px;
+    width: 100%;
+  }
+  figcaption{
+    padding: 20px 0;
+  }
+}
